@@ -1,0 +1,361 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		305ABB171D3E2D2E00B46E36 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 305ABB161D3E2D2E00B46E36 /* Reachability.m */; };
+		C909E15B1CCD112D008B987A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C909E15A1CCD112D008B987A /* main.m */; };
+		C909E15E1CCD112D008B987A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C909E15D1CCD112D008B987A /* AppDelegate.m */; };
+		C909E1611CCD112D008B987A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C909E1601CCD112D008B987A /* ViewController.m */; };
+		C909E1641CCD112D008B987A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C909E1621CCD112D008B987A /* Main.storyboard */; };
+		C909E1661CCD112D008B987A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C909E1651CCD112D008B987A /* Assets.xcassets */; };
+		C909E1691CCD112D008B987A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C909E1671CCD112D008B987A /* LaunchScreen.storyboard */; };
+		C94109AB1CCD12FB00F5C47E /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C94109AA1CCD12FB00F5C47E /* GCDAsyncSocket.m */; };
+		C9A6B9D81CEEA16B004DF143 /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A6B9D71CEEA16B004DF143 /* Tool.m */; };
+		C9A6B9DC1CEEB263004DF143 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A6B9DB1CEEB263004DF143 /* icon.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		305ABB151D3E2D2E00B46E36 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		305ABB161D3E2D2E00B46E36 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		C909E1561CCD112D008B987A /* TCPSocket_Rec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCPSocket_Rec.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C909E15A1CCD112D008B987A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C909E15C1CCD112D008B987A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C909E15D1CCD112D008B987A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C909E15F1CCD112D008B987A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C909E1601CCD112D008B987A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C909E1631CCD112D008B987A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C909E1651CCD112D008B987A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C909E1681CCD112D008B987A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C909E16A1CCD112D008B987A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C94109A91CCD12FB00F5C47E /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		C94109AA1CCD12FB00F5C47E /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		C9A6B9D61CEEA16B004DF143 /* Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tool.h; sourceTree = "<group>"; };
+		C9A6B9D71CEEA16B004DF143 /* Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tool.m; sourceTree = "<group>"; };
+		C9A6B9DB1CEEB263004DF143 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C909E1531CCD112D008B987A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		305ABB141D3E2D2E00B46E36 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				305ABB151D3E2D2E00B46E36 /* Reachability.h */,
+				305ABB161D3E2D2E00B46E36 /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		C909E14D1CCD112D008B987A = {
+			isa = PBXGroup;
+			children = (
+				305ABB141D3E2D2E00B46E36 /* Reachability */,
+				C9A6B9D51CEEA16B004DF143 /* Config */,
+				C94109A81CCD12FB00F5C47E /* GCDAsyncSocket */,
+				C909E1581CCD112D008B987A /* TCPSocket_Rec */,
+				C909E1571CCD112D008B987A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C909E1571CCD112D008B987A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C909E1561CCD112D008B987A /* TCPSocket_Rec.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C909E1581CCD112D008B987A /* TCPSocket_Rec */ = {
+			isa = PBXGroup;
+			children = (
+				C909E15C1CCD112D008B987A /* AppDelegate.h */,
+				C909E15D1CCD112D008B987A /* AppDelegate.m */,
+				C909E15F1CCD112D008B987A /* ViewController.h */,
+				C909E1601CCD112D008B987A /* ViewController.m */,
+				C909E1651CCD112D008B987A /* Assets.xcassets */,
+				C909E1671CCD112D008B987A /* LaunchScreen.storyboard */,
+				C909E16A1CCD112D008B987A /* Info.plist */,
+				C909E1591CCD112D008B987A /* Supporting Files */,
+			);
+			path = TCPSocket_Rec;
+			sourceTree = "<group>";
+		};
+		C909E1591CCD112D008B987A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9A6B9DB1CEEB263004DF143 /* icon.png */,
+				C909E15A1CCD112D008B987A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C94109A81CCD12FB00F5C47E /* GCDAsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				C94109A91CCD12FB00F5C47E /* GCDAsyncSocket.h */,
+				C94109AA1CCD12FB00F5C47E /* GCDAsyncSocket.m */,
+				C909E1621CCD112D008B987A /* Main.storyboard */,
+			);
+			name = GCDAsyncSocket;
+			path = ../GCDAsyncSocket;
+			sourceTree = "<group>";
+		};
+		C9A6B9D51CEEA16B004DF143 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				C9A6B9D61CEEA16B004DF143 /* Tool.h */,
+				C9A6B9D71CEEA16B004DF143 /* Tool.m */,
+			);
+			name = Config;
+			path = ../../Config;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C909E1551CCD112D008B987A /* TCPSocket_Rec */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C909E16D1CCD112D008B987A /* Build configuration list for PBXNativeTarget "TCPSocket_Rec" */;
+			buildPhases = (
+				C909E1521CCD112D008B987A /* Sources */,
+				C909E1531CCD112D008B987A /* Frameworks */,
+				C909E1541CCD112D008B987A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TCPSocket_Rec;
+			productName = TCPSocket_Rec;
+			productReference = C909E1561CCD112D008B987A /* TCPSocket_Rec.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C909E14E1CCD112D008B987A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = XWH;
+				TargetAttributes = {
+					C909E1551CCD112D008B987A = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = C909E1511CCD112D008B987A /* Build configuration list for PBXProject "TCPSocket_Rec" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C909E14D1CCD112D008B987A;
+			productRefGroup = C909E1571CCD112D008B987A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C909E1551CCD112D008B987A /* TCPSocket_Rec */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C909E1541CCD112D008B987A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9A6B9DC1CEEB263004DF143 /* icon.png in Resources */,
+				C909E1691CCD112D008B987A /* LaunchScreen.storyboard in Resources */,
+				C909E1661CCD112D008B987A /* Assets.xcassets in Resources */,
+				C909E1641CCD112D008B987A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C909E1521CCD112D008B987A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9A6B9D81CEEA16B004DF143 /* Tool.m in Sources */,
+				C94109AB1CCD12FB00F5C47E /* GCDAsyncSocket.m in Sources */,
+				C909E1611CCD112D008B987A /* ViewController.m in Sources */,
+				C909E15E1CCD112D008B987A /* AppDelegate.m in Sources */,
+				305ABB171D3E2D2E00B46E36 /* Reachability.m in Sources */,
+				C909E15B1CCD112D008B987A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C909E1621CCD112D008B987A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C909E1631CCD112D008B987A /* Base */,
+			);
+			name = Main.storyboard;
+			path = ../TCPSocket_Rec/TCPSocket_Rec;
+			sourceTree = "<group>";
+		};
+		C909E1671CCD112D008B987A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C909E1681CCD112D008B987A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C909E16B1CCD112D008B987A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C909E16C1CCD112D008B987A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C909E16E1CCD112D008B987A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TCPSocket_Rec/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.1019459067.TCPSocket-Rec";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C909E16F1CCD112D008B987A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TCPSocket_Rec/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.1019459067.TCPSocket-Rec";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C909E1511CCD112D008B987A /* Build configuration list for PBXProject "TCPSocket_Rec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C909E16B1CCD112D008B987A /* Debug */,
+				C909E16C1CCD112D008B987A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C909E16D1CCD112D008B987A /* Build configuration list for PBXNativeTarget "TCPSocket_Rec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C909E16E1CCD112D008B987A /* Debug */,
+				C909E16F1CCD112D008B987A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C909E14E1CCD112D008B987A /* Project object */;
+}
