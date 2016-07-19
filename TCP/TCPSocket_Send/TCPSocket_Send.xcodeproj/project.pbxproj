@@ -6,7 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-
 /* Begin PBXBuildFile section */
 		C909E1341CCD0DD5008B987A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C909E1331CCD0DD5008B987A /* main.m */; };
 		C909E1371CCD0DD5008B987A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C909E1361CCD0DD5008B987A /* AppDelegate.m */; };
@@ -15,6 +14,7 @@
 		C909E13F1CCD0DD5008B987A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C909E13E1CCD0DD5008B987A /* Assets.xcassets */; };
 		C909E1421CCD0DD5008B987A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C909E1401CCD0DD5008B987A /* LaunchScreen.storyboard */; };
 		C909E14C1CCD0F34008B987A /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C909E14B1CCD0F34008B987A /* GCDAsyncSocket.m */; };
+		C9254C1F1D3E77740047D8AE /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C9254C1E1D3E77740047D8AE /* Reachability.m */; };
 		C9A6B9D41CEEA0F3004DF143 /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A6B9D31CEEA0F3004DF143 /* Tool.m */; };
 		C9A6B9E21CEEB39F004DF143 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A6B9E11CEEB39F004DF143 /* icon.png */; };
 /* End PBXBuildFile section */
@@ -32,6 +32,8 @@
 		C909E1431CCD0DD5008B987A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C909E14A1CCD0F34008B987A /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		C909E14B1CCD0F34008B987A /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		C9254C1D1D3E77740047D8AE /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		C9254C1E1D3E77740047D8AE /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		C9A6B9D21CEEA0F3004DF143 /* Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tool.h; sourceTree = "<group>"; };
 		C9A6B9D31CEEA0F3004DF143 /* Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tool.m; sourceTree = "<group>"; };
 		C9A6B9E11CEEB39F004DF143 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 		C909E1261CCD0DD4008B987A = {
 			isa = PBXGroup;
 			children = (
+				C9254C1C1D3E77740047D8AE /* Reachability */,
 				C9A6B9D11CEEA0F3004DF143 /* Config */,
 				C909E1491CCD0F34008B987A /* GCDAsyncSocket */,
 				C909E1311CCD0DD5008B987A /* TCPSocket_Send */,
@@ -99,6 +102,16 @@
 			);
 			name = GCDAsyncSocket;
 			path = ../GCDAsyncSocket;
+			sourceTree = "<group>";
+		};
+		C9254C1C1D3E77740047D8AE /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				C9254C1D1D3E77740047D8AE /* Reachability.h */,
+				C9254C1E1D3E77740047D8AE /* Reachability.m */,
+			);
+			name = Reachability;
+			path = ../../Reachability;
 			sourceTree = "<group>";
 		};
 		C9A6B9D11CEEA0F3004DF143 /* Config */ = {
@@ -186,6 +199,7 @@
 				C909E14C1CCD0F34008B987A /* GCDAsyncSocket.m in Sources */,
 				C909E13A1CCD0DD5008B987A /* ViewController.m in Sources */,
 				C909E1371CCD0DD5008B987A /* AppDelegate.m in Sources */,
+				C9254C1F1D3E77740047D8AE /* Reachability.m in Sources */,
 				C909E1341CCD0DD5008B987A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
