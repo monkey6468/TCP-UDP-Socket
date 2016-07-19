@@ -40,17 +40,15 @@
     BOOL bNetStatus = [[noti object]boolValue];
     if (bNetStatus) {
         [self reconnnectTCP];
-        self.labelIP.text = [Tool localWiFiIPAddress];
     }else
     {
         [self disconnectTcp];
-        self.labelIP.text = nil;
     }
+    self.labelIP.text = [Tool localWiFiIPAddress];
 }
 
 - (IBAction)onBtnConnect:(id)sender {
     Reachability *reach = [Reachability reachabilityForLocalWiFi];
-    NSLog(@"== %ld",(long)reach.currentReachabilityStatus);
     if (reach.currentReachabilityStatus != ReachableViaWiFi) {
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"Wi-Fi is unavailable" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
         [alert show];
@@ -147,6 +145,9 @@
 
 - (void)dealloc
 {
+    [self.serverSocket disconnect];
+    self.serverSocket = nil;
+
     [[NSNotificationCenter defaultCenter]removeObserver:self name:@"netWork_connect_status" object:nil];
 }
 @end
