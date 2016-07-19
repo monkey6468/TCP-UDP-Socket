@@ -33,14 +33,21 @@
     self.serverSocket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:dQueue socketQueue:nil];
     self.navigationItem.title = @"TCP Rec";
 
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(deviceNetWorkConnected:) name:@"netWork_connect_status" object:nil];
 }
-- (void)viewDidAppear:(BOOL)animated
+- (void)deviceNetWorkConnected:(NSNotification *)noti
 {
-    [super viewDidAppear:animated];
-//    if (self.serverSocket.isDisconnected) {
-//        [self reconnnectTCP];
-//    }
+    BOOL bNetStatus = [[noti object]boolValue];
+    if (bNetStatus) {
+        [self reconnnectTCP];
+        self.labelIP.text = [Tool localWiFiIPAddress];
+    }else
+    {
+        [self disconnectTcp];
+        self.labelIP.text = nil;
+    }
 }
+
 - (IBAction)onBtnConnect:(id)sender {
     Reachability *reach = [Reachability reachabilityForLocalWiFi];
     NSLog(@"== %ld",(long)reach.currentReachabilityStatus);
@@ -50,12 +57,16 @@
         return;
     }
     if (_bRunning) {
-        [self.serverSocket disconnect];
-        self.serverSocket.delegate = nil;
-        [self setConnected:NO];
+        [self disconnectTcp];
     }else {
         [self reconnnectTCP];
     }
+}
+- (void)disconnectTcp
+{
+    [self.serverSocket disconnect];
+    self.serverSocket.delegate = nil;
+    [self setConnected:NO];
 }
 - (void)reconnnectTCP
 {
@@ -132,5 +143,10 @@
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
     self.labelIP.text = [Tool localWiFiIPAddress];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:@"netWork_connect_status" object:nil];
 }
 @end

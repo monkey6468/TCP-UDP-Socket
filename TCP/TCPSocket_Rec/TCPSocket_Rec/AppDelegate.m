@@ -7,9 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "Reachability.h"
 
 @interface AppDelegate ()
-
+@property (strong, nonatomic) Reachability *internetReachability;
 @end
 
 @implementation AppDelegate
@@ -17,7 +18,36 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+    self.internetReachability=[Reachability reachabilityForInternetConnection];
+    [self.internetReachability startNotifier];
+    [self updateInterfaceWithReachability:self.internetReachability];
+
     return YES;
+}
+
+- (void)reachabilityChanged:(NSNotification *)note
+{
+    Reachability* curReach = [note object];
+    NSParameterAssert([curReach isKindOfClass:[Reachability class]]);
+    [self updateInterfaceWithReachability:curReach];
+}
+- (void)updateInterfaceWithReachability:(Reachability *)reachability
+{
+    BOOL bNetWork = NO;
+    NetworkStatus netStatus = [reachability currentReachabilityStatus];
+    switch (netStatus) {
+        case NotReachable:
+            bNetWork = NO;
+            break;
+        case ReachableViaWiFi:
+            bNetWork = YES;
+            break;
+        case ReachableViaWWAN:
+            bNetWork = YES;
+            break;
+    }
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"netWork_connect_status" object:@(bNetWork)];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
