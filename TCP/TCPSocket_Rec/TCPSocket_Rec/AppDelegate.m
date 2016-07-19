@@ -26,9 +26,9 @@
     return YES;
 }
 
-- (void)reachabilityChanged:(NSNotification *)note
+- (void)reachabilityChanged:(NSNotification *)noti
 {
-    Reachability* curReach = [note object];
+    Reachability* curReach = [noti object];
     NSParameterAssert([curReach isKindOfClass:[Reachability class]]);
     [self updateInterfaceWithReachability:curReach];
 }
