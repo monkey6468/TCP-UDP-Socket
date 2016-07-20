@@ -78,11 +78,6 @@
         [self disconnectTcp];
         [self setConnected:NO];
     }
-// 断线重连
-//    NSString *host = self.tfHost.text;
-//    uint16_t port = [self.tfPort.text intValue];
-//    self.sendTcpSocket.delegate = self;
-//    [self.sendTcpSocket connectToHost:host onPort:port withTimeout:-1 error:nil];
 }
 #pragma mark - 消息发送成功 代理函数
 - (void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag {
@@ -90,7 +85,6 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         self.tfSend.text = nil;
     });
-//    [self disconLongConnectToSend];
 }
 - (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag {
     NSString *ip = [sock connectedHost];
@@ -123,12 +117,6 @@
     }
     [self longConnectToSend];
 }
-// 及时断开 socket
-- (void)disconLongConnectToSend
-{
-    [self.sendTcpSocket disconnect];
-    self.sendTcpSocket.delegate = nil;
-}
 
 - (void)disconnectTcp
 {
@@ -141,7 +129,7 @@
     NSString *host = self.tfHost.text;
     uint16_t port = [self.tfPort.text intValue];
     NSError *error = nil;
-    BOOL iRet = [self.sendTcpSocket connectToHost:host onPort:port withTimeout:-1 error:&error];
+    BOOL iRet = [self.sendTcpSocket connectToHost:host onPort:port error:&error];
     if (iRet) {
         NSLog(@"blind is Ok");
         [self setConnected:iRet];
@@ -165,8 +153,9 @@
         [self.connectBtn setBackgroundColor:[UIColor whiteColor]];
     }
 }
-- (void)dealloc {
-    NSLog(@"dealloc");
+
+- (void)dealloc
+{
     // 关闭套接字
     [self.sendTcpSocket disconnect];
     self.sendTcpSocket = nil;

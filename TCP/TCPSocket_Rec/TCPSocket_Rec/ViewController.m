@@ -82,10 +82,10 @@
     uint16_t port = [newSocket connectedPort];
 
     [self.allClientArray addObject:newSocket];
-    [newSocket readDataWithTimeout:-1 tag:200];
-    NSString *s = [NSString stringWithFormat:@"IP:%@,PORT:%d  connected:%lu!",ip,port,(unsigned long)self.allClientArray.count];
+    [newSocket readDataWithTimeout:-1 tag:100];
+    NSString *s = [NSString stringWithFormat:@"IP:%@,PORT:%d connected:%lu",ip,port,(unsigned long)self.allClientArray.count];
     NSData *data = [s dataUsingEncoding:NSUTF8StringEncoding];
-    [newSocket writeData:data withTimeout:60 tag:300];
+    [newSocket writeData:data withTimeout:-1 tag:100];
     
     NSString *strDidnew = [NSString stringWithFormat:@"new socket IP: %@, Port: %d ,count:%lu", ip, port,(unsigned long)self.allClientArray.count];
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -104,18 +104,18 @@
     });
     NSString *s2 = [NSString stringWithFormat:@"你发的数据是:%@", s];
     NSData *databack = [s2 dataUsingEncoding:NSUTF8StringEncoding];
-    [sock writeData:databack withTimeout:60 tag:400];
+    [sock writeData:databack withTimeout:-1 tag:100];
     
-    [sock readDataWithTimeout:-1 tag:200];
+    [sock readDataWithTimeout:-1 tag:100];
 }
 
-- (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err {
+- (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err
+{
     if (err) {
         [self.allClientArray removeObject:sock];
-    }else{
+    }else
+    {
         [self.allClientArray removeAllObjects];
-        [self.serverSocket disconnect];
-        self.serverSocket.delegate = nil;
     }
     dispatch_async(dispatch_get_main_queue(), ^{
         self.tvRec.text = [NSString stringWithFormat:@"失去连接 %lu ,err:%@", (unsigned long)self.allClientArray.count,err];
