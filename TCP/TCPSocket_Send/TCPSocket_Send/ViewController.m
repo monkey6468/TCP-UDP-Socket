@@ -31,7 +31,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"TCP Send";
-    self.labelIP.text = [Tool localWiFiIPAddress];
+    
+    [self touchesEnded:nil withEvent:nil];
     
 //    dispatch_queue_t dQueue = dispatch_queue_create("client tdp socket", NULL);
     self.sendTcpSocket = [[GCDAsyncSocket alloc]initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
@@ -168,6 +169,8 @@
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
-    self.labelIP.text = [Tool localWiFiIPAddress];
+    NSString *ip = [Tool localWiFiIPAddress];
+    self.labelIP.text = [NSString stringWithFormat:@"%@【update ip to touch】",[Tool localWiFiIPAddress]];
+    self.tfHost.text = ip;
 }
 @end
